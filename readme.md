@@ -31,18 +31,9 @@ The sampling clock required for DDMTD operation is generated using the **MMCM (M
 
 The architecture follows the classical DDMTD principle:
 
-The beat frequency is defined as:
+$f_{\text{beat}} = \left| f_n - f_{\text{dmtd}} \right|$
 
-$$
-\f_{\text{beat}}=\left|\f_n-\f_{\text{dmtd}}\right|
-$$
-
-The measured time interval in the DDMTD domain ($\Delta t_{\text{dmtd}}$) is converted to the original clock time interval error (TIE) as:
-
-$$
-\Delta t = \Delta t_{\text{dmtd}}\frac{\f_{\text{beat}}}{\f_n}
-$$
-where the phase difference is converted into a slow-beat frequency domain for high-resolution measurement.
+$\Delta t = \Delta t_{\text{dmtd}} \frac{f_{\text{beat}}}{f_n}$
 
 ---
 

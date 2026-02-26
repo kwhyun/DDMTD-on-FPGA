@@ -1,0 +1,9 @@
+{
+	"version": "1.0",
+	"modules": {
+		"ddmtd_system_bd": {
+			"proto_instances": {
+			}
+		}
+	}
+}

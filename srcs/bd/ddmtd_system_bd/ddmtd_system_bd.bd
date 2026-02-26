@@ -1,0 +1,610 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0xB1C7D47BC60D2679",
+      "device": "xc7z020clg484-1",
+      "name": "ddmtd_system_bd",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2025.1",
+      "validated": "true"
+    },
+    "design_tree": {
+      "mmcm_a_dps": "",
+      "mmcm_b": "",
+      "mmcm_ddmtd": "",
+      "dps_controller": "",
+      "ddmtd": "",
+      "bufg": "",
+      "ila": "",
+      "vio": ""
+    },
+    "ports": {
+      "board_clk": {
+        "type": "clk",
+        "direction": "I",
+        "left": "0",
+        "right": "0",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "ddmtd_system_bd_BUFG_I_0",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "default"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "default"
+          }
+        }
+      },
+      "resetn": {
+        "type": "rst",
+        "direction": "I",
+        "parameters": {
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "POLARITY": {
+            "value": "ACTIVE_LOW",
+            "value_src": "default"
+          }
+        }
+      },
+      "clk_ddmtd_locked": {
+        "direction": "O"
+      }
+    },
+    "components": {
+      "mmcm_a_dps": {
+        "vlnv": "xilinx.com:ip:clk_wiz:6.0",
+        "ip_revision": "16",
+        "xci_name": "ddmtd_system_bd_clk_wiz_0_0",
+        "xci_path": "ip\\ddmtd_system_bd_clk_wiz_0_0\\ddmtd_system_bd_clk_wiz_0_0.xci",
+        "inst_hier_path": "mmcm_a_dps",
+        "has_run_ip_tcl": "true",
+        "parameters": {
+          "CLKOUT1_DRIVES": {
+            "value": "BUFG"
+          },
+          "CLKOUT1_JITTER": {
+            "value": "125.247"
+          },
+          "CLKOUT1_REQUESTED_OUT_FREQ": {
+            "value": "125.000"
+          },
+          "CLKOUT2_DRIVES": {
+            "value": "BUFG"
+          },
+          "CLKOUT3_DRIVES": {
+            "value": "BUFG"
+          },
+          "CLKOUT4_DRIVES": {
+            "value": "BUFG"
+          },
+          "CLKOUT5_DRIVES": {
+            "value": "BUFG"
+          },
+          "CLKOUT6_DRIVES": {
+            "value": "BUFG"
+          },
+          "CLKOUT7_DRIVES": {
+            "value": "BUFG"
+          },
+          "CLK_OUT1_PORT": {
+            "value": "clk_a_o"
+          },
+          "MMCM_CLKFBOUT_USE_FINE_PS": {
+            "value": "true"
+          },
+          "MMCM_CLKOUT0_DIVIDE_F": {
+            "value": "8.000"
+          },
+          "OVERRIDE_MMCM": {
+            "value": "true"
+          },
+          "PRIM_SOURCE": {
+            "value": "Global_buffer"
+          },
+          "RESET_PORT": {
+            "value": "resetn"
+          },
+          "RESET_TYPE": {
+            "value": "ACTIVE_LOW"
+          },
+          "SECONDARY_SOURCE": {
+            "value": "Single_ended_clock_capable_pin"
+          },
+          "USE_DYN_PHASE_SHIFT": {
+            "value": "true"
+          },
+          "USE_PHASE_ALIGNMENT": {
+            "value": "false"
+          }
+        }
+      },
+      "mmcm_b": {
+        "vlnv": "xilinx.com:ip:clk_wiz:6.0",
+        "ip_revision": "16",
+        "xci_name": "ddmtd_system_bd_clk_wiz_0_1",
+        "xci_path": "ip\\ddmtd_system_bd_clk_wiz_0_1\\ddmtd_system_bd_clk_wiz_0_1.xci",
+        "inst_hier_path": "mmcm_b",
+        "has_run_ip_tcl": "true",
+        "parameters": {
+          "CLKOUT1_DRIVES": {
+            "value": "BUFG"
+          },
+          "CLKOUT1_JITTER": {
+            "value": "125.247"
+          },
+          "CLKOUT1_REQUESTED_OUT_FREQ": {
+            "value": "125.000"
+          },
+          "CLKOUT2_DRIVES": {
+            "value": "BUFG"
+          },
+          "CLKOUT3_DRIVES": {
+            "value": "BUFG"
+          },
+          "CLKOUT4_DRIVES": {
+            "value": "BUFG"
+          },
+          "CLKOUT5_DRIVES": {
+            "value": "BUFG"
+          },
+          "CLKOUT6_DRIVES": {
+            "value": "BUFG"
+          },
+          "CLKOUT7_DRIVES": {
+            "value": "BUFG"
+          },
+          "CLK_OUT1_PORT": {
+            "value": "clk_b_o"
+          },
+          "MMCM_CLKOUT0_DIVIDE_F": {
+            "value": "8.000"
+          },
+          "PRIM_SOURCE": {
+            "value": "Global_buffer"
+          },
+          "RESET_PORT": {
+            "value": "resetn"
+          },
+          "RESET_TYPE": {
+            "value": "ACTIVE_LOW"
+          },
+          "SECONDARY_SOURCE": {
+            "value": "Single_ended_clock_capable_pin"
+          },
+          "USE_PHASE_ALIGNMENT": {
+            "value": "false"
+          }
+        }
+      },
+      "mmcm_ddmtd": {
+        "vlnv": "xilinx.com:ip:clk_wiz:6.0",
+        "ip_revision": "16",
+        "xci_name": "ddmtd_system_bd_clk_wiz_0_2",
+        "xci_path": "ip\\ddmtd_system_bd_clk_wiz_0_2\\ddmtd_system_bd_clk_wiz_0_2.xci",
+        "inst_hier_path": "mmcm_ddmtd",
+        "has_run_ip_tcl": "true",
+        "parameters": {
+          "CLKOUT1_DRIVES": {
+            "value": "BUFG"
+          },
+          "CLKOUT1_JITTER": {
+            "value": "197.421"
+          },
+          "CLKOUT1_PHASE_ERROR": {
+            "value": "301.537"
+          },
+          "CLKOUT1_REQUESTED_OUT_FREQ": {
+            "value": "125.06667"
+          },
+          "CLKOUT2_DRIVES": {
+            "value": "BUFG"
+          },
+          "CLKOUT3_DRIVES": {
+            "value": "BUFG"
+          },
+          "CLKOUT4_DRIVES": {
+            "value": "BUFG"
+          },
+          "CLKOUT5_DRIVES": {
+            "value": "BUFG"
+          },
+          "CLKOUT6_DRIVES": {
+            "value": "BUFG"
+          },
+          "CLKOUT7_DRIVES": {
+            "value": "BUFG"
+          },
+          "CLK_OUT1_PORT": {
+            "value": "clk_ddmtd_o"
+          },
+          "MMCM_CLKFBOUT_MULT_F": {
+            "value": "58.625"
+          },
+          "MMCM_CLKOUT0_DIVIDE_F": {
+            "value": "9.375"
+          },
+          "MMCM_DIVCLK_DIVIDE": {
+            "value": "5"
+          },
+          "PRIM_SOURCE": {
+            "value": "Global_buffer"
+          },
+          "RESET_PORT": {
+            "value": "resetn"
+          },
+          "RESET_TYPE": {
+            "value": "ACTIVE_LOW"
+          },
+          "SECONDARY_SOURCE": {
+            "value": "Single_ended_clock_capable_pin"
+          },
+          "USE_PHASE_ALIGNMENT": {
+            "value": "false"
+          }
+        }
+      },
+      "dps_controller": {
+        "vlnv": "xilinx.com:module_ref:dps_controller:1.0",
+        "ip_revision": "1",
+        "xci_name": "ddmtd_system_bd_dps_controller_0_0",
+        "xci_path": "ip\\ddmtd_system_bd_dps_controller_0_0\\ddmtd_system_bd_dps_controller_0_0.xci",
+        "inst_hier_path": "dps_controller",
+        "has_run_ip_tcl": "true",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "dps_controller",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "psclk_i": {
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "125066666",
+                "value_src": "ip_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "ip_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "ddmtd_system_bd_clk_wiz_0_2_clk_ddmtd_o",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "rstn_i": {
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "toggle_i": {
+            "direction": "I"
+          },
+          "dir_i": {
+            "direction": "I"
+          },
+          "steps_per_toggle_i": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "locked_i": {
+            "direction": "I"
+          },
+          "psdone_i": {
+            "direction": "I"
+          },
+          "psen_o": {
+            "direction": "O"
+          },
+          "psincdec_o": {
+            "direction": "O"
+          },
+          "total_steps_o": {
+            "direction": "O",
+            "left": "15",
+            "right": "0"
+          }
+        }
+      },
+      "ddmtd": {
+        "vlnv": "xilinx.com:module_ref:ddmtd:1.0",
+        "ip_revision": "1",
+        "xci_name": "ddmtd_system_bd_ddmtd_0_0",
+        "xci_path": "ip\\ddmtd_system_bd_ddmtd_0_0\\ddmtd_system_bd_ddmtd_0_0.xci",
+        "inst_hier_path": "ddmtd",
+        "has_run_ip_tcl": "true",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "ddmtd",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "rst_n_ddmtdclk_i": {
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "clk_a_i": {
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "125000000",
+                "value_src": "ip_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "ip_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "ddmtd_system_bd_clk_wiz_0_0_clk_a_o",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "clk_b_i": {
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "125000000",
+                "value_src": "ip_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "ip_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "ddmtd_system_bd_clk_wiz_0_1_clk_b_o",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "clk_ddmtd_i": {
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "125066666",
+                "value_src": "ip_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "ip_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "ddmtd_system_bd_clk_wiz_0_2_clk_ddmtd_o",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "deglitch_threshold_i": {
+            "direction": "I",
+            "left": "15",
+            "right": "0"
+          },
+          "phase_diff_o": {
+            "direction": "O",
+            "left": "15",
+            "right": "0"
+          },
+          "phase_diff_p_o": {
+            "direction": "O"
+          }
+        }
+      },
+      "bufg": {
+        "vlnv": "xilinx.com:ip:util_ds_buf:2.2",
+        "ip_revision": "8",
+        "xci_name": "ddmtd_system_bd_util_ds_buf_0_0",
+        "xci_path": "ip\\ddmtd_system_bd_util_ds_buf_0_0\\ddmtd_system_bd_util_ds_buf_0_0.xci",
+        "inst_hier_path": "bufg",
+        "has_run_ip_tcl": "true",
+        "parameters": {
+          "C_BUF_TYPE": {
+            "value": "BUFG"
+          }
+        }
+      },
+      "ila": {
+        "vlnv": "xilinx.com:ip:ila:6.2",
+        "ip_revision": "18",
+        "xci_name": "ddmtd_system_bd_ila_0_0",
+        "xci_path": "ip\\ddmtd_system_bd_ila_0_0\\ddmtd_system_bd_ila_0_0.xci",
+        "inst_hier_path": "ila",
+        "has_run_ip_tcl": "true",
+        "parameters": {
+          "C_DATA_DEPTH": {
+            "value": "65536"
+          },
+          "C_EN_STRG_QUAL": {
+            "value": "1"
+          },
+          "C_MONITOR_TYPE": {
+            "value": "Native"
+          },
+          "C_NUM_OF_PROBES": {
+            "value": "4"
+          },
+          "C_PROBE0_WIDTH": {
+            "value": "16"
+          }
+        }
+      },
+      "vio": {
+        "vlnv": "xilinx.com:ip:vio:3.0",
+        "ip_revision": "27",
+        "xci_name": "ddmtd_system_bd_vio_0_0",
+        "xci_path": "ip\\ddmtd_system_bd_vio_0_0\\ddmtd_system_bd_vio_0_0.xci",
+        "inst_hier_path": "vio",
+        "has_run_ip_tcl": "true",
+        "parameters": {
+          "C_NUM_PROBE_IN": {
+            "value": "2"
+          },
+          "C_NUM_PROBE_OUT": {
+            "value": "4"
+          },
+          "C_PROBE_IN0_WIDTH": {
+            "value": "16"
+          },
+          "C_PROBE_IN1_WIDTH": {
+            "value": "16"
+          },
+          "C_PROBE_OUT0_WIDTH": {
+            "value": "16"
+          },
+          "C_PROBE_OUT3_WIDTH": {
+            "value": "8"
+          }
+        }
+      }
+    },
+    "nets": {
+      "BUFG_I_0_1": {
+        "ports": [
+          "board_clk",
+          "bufg/BUFG_I"
+        ]
+      },
+      "bufg_BUFG_O": {
+        "ports": [
+          "bufg/BUFG_O",
+          "mmcm_a_dps/clk_in1",
+          "mmcm_b/clk_in1",
+          "mmcm_ddmtd/clk_in1"
+        ]
+      },
+      "ddmtd_phase_diff_o": {
+        "ports": [
+          "ddmtd/phase_diff_o",
+          "ila/probe0",
+          "vio/probe_in0"
+        ]
+      },
+      "ddmtd_phase_diff_p_o": {
+        "ports": [
+          "ddmtd/phase_diff_p_o",
+          "ila/probe1"
+        ]
+      },
+      "dps_controller_psen": {
+        "ports": [
+          "dps_controller/psen_o",
+          "mmcm_a_dps/psen",
+          "ila/probe3"
+        ]
+      },
+      "dps_controller_psincdec": {
+        "ports": [
+          "dps_controller/psincdec_o",
+          "mmcm_a_dps/psincdec"
+        ]
+      },
+      "dps_controller_total_steps": {
+        "ports": [
+          "dps_controller/total_steps_o",
+          "vio/probe_in1"
+        ]
+      },
+      "mmcm_a_dps_clk_a_o": {
+        "ports": [
+          "mmcm_a_dps/clk_a_o",
+          "ddmtd/clk_a_i"
+        ]
+      },
+      "mmcm_a_dps_locked": {
+        "ports": [
+          "mmcm_a_dps/locked",
+          "dps_controller/locked_i"
+        ]
+      },
+      "mmcm_a_dps_psdone": {
+        "ports": [
+          "mmcm_a_dps/psdone",
+          "ila/probe2",
+          "dps_controller/psdone_i"
+        ]
+      },
+      "mmcm_b_clk_b_o": {
+        "ports": [
+          "mmcm_b/clk_b_o",
+          "ddmtd/clk_b_i"
+        ]
+      },
+      "mmcm_ddmtd_clk_ddmtd_o": {
+        "ports": [
+          "mmcm_ddmtd/clk_ddmtd_o",
+          "ddmtd/clk_ddmtd_i",
+          "ila/clk",
+          "vio/clk",
+          "mmcm_a_dps/psclk",
+          "dps_controller/psclk_i"
+        ]
+      },
+      "mmcm_ddmtd_locked": {
+        "ports": [
+          "mmcm_ddmtd/locked",
+          "clk_ddmtd_locked"
+        ]
+      },
+      "resetn_0_1": {
+        "ports": [
+          "resetn",
+          "mmcm_a_dps/resetn",
+          "mmcm_b/resetn",
+          "dps_controller/rstn_i",
+          "mmcm_ddmtd/resetn",
+          "ddmtd/rst_n_ddmtdclk_i"
+        ]
+      },
+      "vio_probe_out0": {
+        "ports": [
+          "vio/probe_out0",
+          "ddmtd/deglitch_threshold_i"
+        ]
+      },
+      "vio_probe_out1": {
+        "ports": [
+          "vio/probe_out1",
+          "dps_controller/toggle_i"
+        ]
+      },
+      "vio_probe_out2": {
+        "ports": [
+          "vio/probe_out2",
+          "dps_controller/dir_i"
+        ]
+      },
+      "vio_probe_out3": {
+        "ports": [
+          "vio/probe_out3",
+          "dps_controller/steps_per_toggle_i"
+        ]
+      }
+    }
+  }
+}

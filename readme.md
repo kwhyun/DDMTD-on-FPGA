@@ -31,9 +31,13 @@ The sampling clock required for DDMTD operation is generated using the **MMCM (M
 
 The architecture follows the classical DDMTD principle:
 
-$f_{\text{beat}} = \left| f_n - f_{\text{dmtd}} \right|$
+$$
+f_{\text{sampled}} = \left| f_n - f_{\text{ddmtd}} \right|
+$$
 
-$\Delta t = \Delta t_{\text{dmtd}} \frac{f_{\text{beat}}}{f_n}$
+$$
+\Delta t = \Delta t_{\text{ddmtd}} \frac{f_{\text{sampled}}}{f_n}
+$$
 
 ---
 
